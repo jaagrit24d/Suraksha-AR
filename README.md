@@ -72,7 +72,7 @@ Suraksha AR turns that learning into something hands-on. A full 3D fire extingui
 ### Steps
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   git clone https://github.com/jaagrit24d/Suraksha-AR.git
    ```
 2. In Unity Hub, click **Add → Add project from disk** and select the cloned folder.
 3. Open it with **Unity 6000.5.10f1**. The first import takes a while while Unity rebuilds the `Library` folder.
