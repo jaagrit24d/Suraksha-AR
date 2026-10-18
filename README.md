@@ -17,7 +17,11 @@ No stylus. No controller. No screen touches.
 
 ## Demo
 
-https://github.com/user-attachments/assets/d8200f83-5f47-40b7-a0d5-3489e7b470df
+
+
+https://github.com/user-attachments/assets/9a0d0857-b88c-4e85-b6b8-21f564d3ba46
+
+
 
 ---
 
