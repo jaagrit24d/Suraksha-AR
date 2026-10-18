@@ -1,11 +1,10 @@
-# Suraksha-AR
-[README.md](https://github.com/user-attachments/files/33623876/README.md)
+[README (1).md](https://github.com/user-attachments/files/33624220/README.1.md)
 <div align="center">
 
-# ✋ AR Drawing
+# 🔥 Suraksha AR
 
-**Draw floating 3D strokes in augmented reality using just your bare hand.**
-No stylus. No controller. No screen touches.
+**Learn how a fire extinguisher works by exploring it in augmented reality.**
+Point your phone, pick up a virtual extinguisher with your hand, and discover what every part does.
 
 ![Unity](https://img.shields.io/badge/Unity-6000.5.10f1-black?logo=unity)
 ![Platform](https://img.shields.io/badge/Platform-Android%20(ARCore)-3DDC84?logo=android&logoColor=white)
@@ -18,8 +17,7 @@ No stylus. No controller. No screen touches.
 ## Demo
 
 
-
-https://github.com/user-attachments/assets/9a0d0857-b88c-4e85-b6b8-21f564d3ba46
+https://github.com/user-attachments/assets/3d617a91-daad-4427-8122-5b83a5f34c90
 
 
 
@@ -27,9 +25,9 @@ https://github.com/user-attachments/assets/9a0d0857-b88c-4e85-b6b8-21f564d3ba46
 
 ## About
 
-Most drawing apps are flat. They trap your creativity on a 2D canvas.
+*Suraksha* means **safety**. In an emergency, there is no time to read the label on a fire extinguisher, yet most people never learn how to use one until they have to.
 
-AR Drawing breaks that. Point your phone at any surface, raise your hand, and paint 3D strokes that float in the real world around you, anchored in space and visible through the camera.
+Suraksha AR turns that learning into something hands-on. A full 3D fire extinguisher appears in your real surroundings through the phone camera. You can move it, turn it around, and look at it from any angle. As you explore, an on-screen panel names each part and explains what it does and how to use it correctly.
 
 ---
 
@@ -37,39 +35,30 @@ AR Drawing breaks that. Point your phone at any surface, raise your hand, and pa
 
 | | Feature | What it does |
 |---|---|---|
-| 🖐️ | **Touchless hand tracking** | Real-time 21-point hand detection via MediaPipe at 60 fps, with adaptive filtering for smooth, jitter-free strokes |
-| 🎛️ | **Gesture-driven interface** | Hold up an open palm to open a radial arc menu, then use finger taps to navigate and select tools |
-| 🎨 | **Full drawing toolkit** | Multiple colors, brush sizes, an eraser, undo/redo and canvas clear, all operated by gestures |
-| 💾 | **Save and gallery** | Save drawings as stroke data with an auto-generated thumbnail, then browse and reload past creations |
-| 🔄 | **3D inspector** | View a saved drawing on a dedicated screen: rotate, zoom and twist it in 3D, then summon it back into your AR scene |
+| 📱 | **Augmented reality** | A 3D fire extinguisher is placed in the live camera view, so you learn on a life-size object in your own space |
+| ✋ | **Hand interaction** | Use your bare hand in front of the camera to move and inspect the model, with no buttons needed |
+| 🏷️ | **Part-by-part guidance** | An info panel shows the name of each part, a short description, and step-by-step usage tips |
+| 🔄 | **View from every angle** | Rotate the model to see the nozzle, handle, gauge and pin from all sides |
 
 ---
 
-## How It Works
+## What You'll Learn
 
-AR Drawing handles the hard math quietly so the experience feels effortless:
+| Part | What it does |
+|---|---|
+| **Nozzle** | Directs the extinguishing agent toward the fire. Squeeze the handle while sweeping the nozzle side to side at the base of the fire |
+| **Pressure Gauge** | Shows whether the extinguisher is charged and ready to use |
+| **Safety Pin** | Prevents accidental discharge. Pull the pin firmly to break the seal, aiming the nozzle away from yourself |
 
-- **Async camera pipeline:** frames are processed for hand tracking on a background thread, so the main app stays at 60 fps.
-- **One Euro Filter:** a custom adaptive filter removes jitter when your hand is still, but reacts instantly when you move fast.
-- **Hysteresis boundaries:** the pinch gesture has separate thresholds for starting and stopping, so strokes don't flicker if your hand trembles.
-- **Smart 2D eraser:** instead of expensive 3D raycasts, the app projects 3D strokes into screen space and deletes whatever your fingers wipe across.
-- **Offscreen rendering:** when you save, a hidden camera captures a clean thumbnail of your 3D art on a black background.
+> ⚠️ **Disclaimer:** Suraksha AR is an educational tool. It does not replace hands-on fire safety training from a qualified instructor. In a real fire, prioritise your safety and call your local emergency number.
 
 ---
 
 ## Requirements
 
 - An Android device running **Android 7.0 or higher** with **ARCore support** ([check the supported devices list](https://developers.google.com/ar/devices))
-- A working camera and good lighting for reliable hand tracking
-
----
-
-## Installation (play the app)
-
-1. Download the latest `.apk` from the [**Releases**](../../releases) tab.
-2. On your phone, go to **Settings → Install unknown apps** and allow installs from your browser or file manager.
-3. Open the downloaded `.apk` and tap **Install**.
-4. Launch **AR Drawing** and grant **camera permission** when prompted.
+- A working camera and good lighting
+- Enough free space to move your hand in front of the camera
 
 ---
 
@@ -83,7 +72,7 @@ AR Drawing handles the hard math quietly so the experience feels effortless:
 ### Steps
 1. Clone the repo:
    ```bash
-   git clone https://github.com/Aliasgersb/YOUR_REPO_NAME.git
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
    ```
 2. In Unity Hub, click **Add → Add project from disk** and select the cloned folder.
 3. Open it with **Unity 6000.5.10f1**. The first import takes a while while Unity rebuilds the `Library` folder.
@@ -98,14 +87,14 @@ The MediaPipe package lives in `LocalPackages/com.github.homuler.mediapipe` and 
 | Scripting Backend | IL2CPP |
 | Target Architectures | ARM64 |
 
-> **Note:** AR and hand tracking don't work fully inside the Unity editor. Test on a real Android device.
+> **Note:** AR doesn't work fully inside the Unity editor. Test on a real Android device.
 
 ---
 
 ## Project Structure
 
 ```
-Assets/            Scenes, scripts, UI and project content
+Assets/            Scenes, scripts, 3D models and UI
 LocalPackages/     Local MediaPipe Unity plugin package
 Packages/          Unity package manifest
 ProjectSettings/   Unity project configuration
@@ -119,7 +108,7 @@ ProjectSettings/   Unity project configuration
 |---|---|
 | Phone not listed in Run Device | Replug the cable, set USB mode to File Transfer, accept the USB debugging prompt, then click **Refresh** |
 | Black screen or no camera feed | Make sure camera permission is granted and the phone supports ARCore |
-| Pink materials | Render pipeline mismatch: check that the URP asset is assigned in **Project Settings → Graphics** |
+| Model doesn't appear | Move the phone slowly and point it at a well-lit area so ARCore can track the surroundings |
 | Hand not detected | Use brighter lighting and keep your whole hand inside the camera view |
 
 ---
@@ -127,10 +116,9 @@ ProjectSettings/   Unity project configuration
 ## Tech Stack
 
 - Unity 6 (6000.5.10f1)
-- AR Foundation 6.3 + ARCore 6.3
-- MediaPipe Hand Landmarker 0.16.3
-- Universal Render Pipeline (URP) 17.3
-- Unity UI Toolkit
+- AR Foundation + ARCore
+- MediaPipe Hand Landmarker (via the MediaPipe Unity Plugin)
+- Universal Render Pipeline (URP)
 - C#, Android
 
 ---
@@ -143,15 +131,8 @@ ProjectSettings/   Unity project configuration
 
 ---
 
-## Author
-
-**Aliasger Bhabhrawala**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Aliasgersb-181717?logo=github)](https://github.com/Aliasgersb)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aliasger%20Bhabhrawala-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aliasger-bhabhrawala)
-
----
-
 ## License
 
-Released under the MIT License. See [LICENSE](LICENSE) for details.
+Released under the MIT License. Copyright (c) 2026 Aliasgersb. See [LICENSE](LICENSE) for details.
+
+Third-party components, such as the MediaPipe Unity Plugin in `LocalPackages`, keep their own licenses.
