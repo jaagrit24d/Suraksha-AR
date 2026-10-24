@@ -74,10 +74,13 @@ Suraksha AR turns that learning into something hands-on. A full 3D fire extingui
    ```bash
    git clone https://github.com/jaagrit24d/Suraksha-AR.git
    ```
-2. In Unity Hub, click **Add → Add project from disk** and select the cloned folder.
-3. Open it with **Unity 6000.5.10f1**. The first import takes a while while Unity rebuilds the `Library` folder.
-4. Go to **File → Build Profiles**, select **Android**, and click **Switch Platform**.
-5. Connect your phone and click **Build and Run**.
+2. Since the source code exceeds the standard limit of GitHub, kindly download the .zip file from the given drive link-
+  https://drive.google.com/file/d/1Ec1tjMRtXJ44m76HQcPZ6NcP6J6yTsvG/view?usp=sharing
+   
+3. In Unity Hub, click **Add → Add project from disk** and select the cloned folder.
+4. Open it with **Unity 6000.5.10f1**. The first import takes a while while Unity rebuilds the `Library` folder.
+5. Go to **File → Build Profiles**, select **Android**, and click **Switch Platform**.
+6. Connect your phone and click **Build and Run**.
 
 The MediaPipe package lives in `LocalPackages/com.github.homuler.mediapipe` and resolves automatically on first open, so no extra setup is needed.
 
